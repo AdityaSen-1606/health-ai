@@ -1,168 +1,344 @@
-.page {
-  --gray-rgb: 0, 0, 0;
-  --gray-alpha-200: rgba(var(--gray-rgb), 0.08);
-  --gray-alpha-100: rgba(var(--gray-rgb), 0.05);
-
-  --button-primary-hover: #383838;
-  --button-secondary-hover: #f2f2f2;
-
-  display: grid;
-  grid-template-rows: 20px 1fr 20px;
-  align-items: center;
-  justify-items: center;
-  min-height: 100svh;
-  padding: 80px;
-  gap: 64px;
-  font-family: var(--font-geist-sans);
+.par{
+  background-color: #f3f3f3;
 }
 
-@media (prefers-color-scheme: dark) {
-  .page {
-    --gray-rgb: 255, 255, 255;
-    --gray-alpha-200: rgba(var(--gray-rgb), 0.145);
-    --gray-alpha-100: rgba(var(--gray-rgb), 0.06);
+.page {
+  background-color: #f3f3f3;
+}
 
-    --button-primary-hover: #ccc;
-    --button-secondary-hover: #1a1a1a;
+.sec1_container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+}
+
+.sec1_container_t{
+  margin-top: 60px;
+  max-width: 850px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+@import url('https://api.fontshare.com/v2/css?f[]=clash-grotesk@800&display=swap');
+
+@import url('https://fonts.cdnfonts.com/css/satoshi');
+
+.sec1_container_t h2{
+  font-family: 'Clash Grotesk', sans-serif;
+  font-size: 72px;
+  font-weight: 800;
+}
+
+.sec1_container_t button{
+  display: block;
+  padding: 10px 20px;
+  border-radius: 16px;
+  font-family: 'Satoshi', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24.3px;
+  color: #FFFFFF;
+  background-color: #1F1F1F;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.sec1_container_t img{
+  width: 150px;
+}
+
+.sec1_logo_slider{
+  display: flex;
+  padding: 25px;
+  justify-content: center;
+  margin: 30px;
+  gap: clamp(50px, 5vw, 200px);
+}
+
+.sec1_logo_slider_title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sec1_logo_slider_title p{
+  font-family: 'Clash Grotesk', sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  color: #5f5f69;
+}
+
+.sec1_logo_slider_wrapper {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  align-items: center;
+  justify-content: space-between;
+  width: 65%;
+}
+
+.sec1_logo_slider_shadow_left,
+.sec1_logo_slider_shadow_right {
+  height: 100%;
+  z-index: 1;
+}
+
+.sec1_single_slider_container{
+  display: flex;
+  animation: slideLeft 10s infinite Linear;
+}
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
   }
 }
 
-.main {
+.sec1_single_slider_container_img {
+  max-width: 27%;
+  height: 50%;
+  display: inline-block;
+  vertical-align: center;
+}
+
+.sec1_single_slider_container_img_1 {
+  max-width: 45%;
+  height: 40%;
+  display: inline-block;
+  vertical-align: center;
+}
+
+/* comment: starting data styling */
+
+.data{
+  border-bottom: 1px solid #1615251a;
+  background-color: #FFFFFF;
+  padding-top: 100px;
+  padding-bottom: 95px;
+  justify-content: center;
+  display: flex;
+}
+
+.counter_content{
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+}
+
+.left_content{
+  width: 40%
+}
+
+.left_content h2{
+  font-size: 36px;
+  line-height: 130%;
+  color: #161525;
+  letter-spacing: -1px;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 600;
+  font-family: 'Clash Grotesk', sans-serif;
+}
+
+.counter_content_wrapper {
+  display: flex;
+  gap: 98px;
+  flex-wrap: wrap;
+}
+
+.single_number{
+  text-align: center;
+}
+
+.single_number h1{
+  color: #5a45fe;
+  letter-spacing: -1.92px;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 64px;
+  font-weight: 600;
+  line-height: 115%;
+  font-family: 'Clash Grotesk', sans-serif;
+}
+
+.single_number p{
+  font-size: 18px;
+  color: #5f5f69;
+  font-family: 'Clash Grotesk', sans-serif;
+}
+
+/* starting sec3 */
+.sec3{
+  padding: 120px 30px;
+}
+
+.sec3_container{
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  width: 80%;
+}
+
+.sec3_header_wrapper {
   display: flex;
   flex-direction: column;
-  gap: 32px;
-  grid-row-start: 2;
-}
-
-.main ol {
-  font-family: var(--font-geist-mono);
-  padding-left: 0;
-  margin: 0;
-  font-size: 14px;
-  line-height: 24px;
-  letter-spacing: -0.01em;
-  list-style-position: inside;
-}
-
-.main li:not(:last-of-type) {
-  margin-bottom: 8px;
-}
-
-.main code {
-  font-family: inherit;
-  background: var(--gray-alpha-100);
-  padding: 2px 4px;
-  border-radius: 4px;
-  font-weight: 600;
-}
-
-.ctas {
-  display: flex;
+  text-align: center;
+  align-items: center;
+  padding-bottom: 80px;
   gap: 16px;
 }
 
-.ctas a {
-  appearance: none;
-  border-radius: 128px;
-  height: 48px;
-  padding: 0 20px;
-  border: none;
-  border: 1px solid transparent;
-  transition:
-    background 0.2s,
-    color 0.2s,
-    border-color 0.2s;
+.sec3_header_wrapper h1{
+  font-family: 'Clash Grotesk', sans-serif;
+  letter-spacing: -1px;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 120%;
+  color: #161525;
+}
+
+.sec3_header_wrapper p{
+  font-size: 18px;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 400;
+  line-height: 170%;
+  font-family: 'Clash Grotesk', sans-serif;
+  color: #5f5f69;
+}
+
+.sec3_features {
+  border-radius: 16px;
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  gap: 170px;
+}
+
+.sec3_features_tab{
+  border-radius: 16px;
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+
+.sec3_features_tab_button_wrapper{
+  border-right: 1px solid #1615250f;
+  flex-flow: column;
+  width: 35%;
+  padding-bottom: 50px;
+  display: flex;
+  position: relative;
+}
+
+.sec3_features_tab_single{
+  gap: 20px;
+  color: #3330;
+  background-color: #ddd0;
+  border-top: 2px solid #1615250f;
+  border-left: 2px solid #0000;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 24px;
+  display: flex;
+  vertical-align: top;
+  text-align: left;
   cursor: pointer;
+  position: relative;
+  max-width: 100%;
+}
+
+.tab_button_icon_left{
+  width: 24px;
+  padding-top: 2px;
+}
+
+.tab_icon_left{
+  width: 28px;
+}
+
+.tab_button_content{
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-flow: column;
+  gap: 10px;
+  width: 80%;
+}
+
+.tab_button_content h2{
+  font-family: 'Clash Grotesk', sans-serif;
+  color: #161525;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 20px;
+  line-height: 170%;
+}
+
+.tab_button_content p{
+  color: #5f5f69;
+  font-family: 'Clash Grotesk', sans-serif;
+  margin-top: 0;
+  margin-bottom: 0;
   font-size: 16px;
-  line-height: 20px;
-  font-weight: 500;
+  font-weight: 400;
+  line-height: 170%;
 }
 
-a.primary {
-  background: var(--foreground);
-  color: var(--background);
-  gap: 8px;
+.tab_button_icon_right{
+  width: 18px;
 }
 
-a.secondary {
-  border-color: var(--gray-alpha-200);
-  min-width: 180px;
+.tab_icon_right{
+  width: 18px;
 }
 
-.footer {
-  grid-row-start: 3;
+.sec3_features_tab_content_wrapper{
   display: flex;
-  gap: 24px;
-}
-
-.footer a {
-  display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 8px;
+  width: 65%;
+  position: relative;
+  overflow: hidden;
 }
 
-.footer img {
-  flex-shrink: 0;
+.sec3_features_tab_content_wrapper_single{
+  position: relative;
 }
 
-/* Enable hover only on non-touch devices */
-@media (hover: hover) and (pointer: fine) {
-  a.primary:hover {
-    background: var(--button-primary-hover);
-    border-color: transparent;
-  }
-
-  a.secondary:hover {
-    background: var(--button-secondary-hover);
-    border-color: transparent;
-  }
-
-  .footer a:hover {
-    text-decoration: underline;
-    text-underline-offset: 4px;
-  }
+.features_tab_image{
+  border: 1.5px solid #161525;
+  border-radius: 18px;
+  width: 230px;
+  height: 500px;
+  max-height: 500px;
+  box-shadow: 0 4px #000;
 }
 
-@media (max-width: 600px) {
-  .page {
-    padding: 32px;
-    padding-bottom: 80px;
-  }
-
-  .main {
-    align-items: center;
-  }
-
-  .main ol {
-    text-align: center;
-  }
-
-  .ctas {
-    flex-direction: column;
-  }
-
-  .ctas a {
-    font-size: 14px;
-    height: 40px;
-    padding: 0 16px;
-  }
-
-  a.secondary {
-    min-width: auto;
-  }
-
-  .footer {
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-  }
+.sec3_button{
+  display: flex;
+  justify-content: center;
 }
 
-@media (prefers-color-scheme: dark) {
-  .logo {
-    filter: invert();
-  }
+.sec3_button button{
+  padding: 10px 20px;
+  border-radius: 16px;
+  font-family: 'Satoshi', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24.3px;
+  color: #FFFFFF;
+  background-color: #1F1F1F;
+  cursor: pointer;
 }
