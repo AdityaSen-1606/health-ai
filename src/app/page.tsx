@@ -1,23 +1,35 @@
+"use client";
+
 import styles from "./page.module.css";
 import { Navbar } from "./components/Navbar";
 import Image from "next/image";
-import right from "./assets/right_logo_slider.png"
-import left from "./assets/left_logo_slider.png"
-import logo1 from "./assets/logo1.png"
-import logo2 from "./assets/logo2.png"
-import logo3 from "./assets/logo3.png"
+import right from "./assets/right_logo_slider.png";
+import left from "./assets/left_logo_slider.png";
+import logo1 from "./assets/logo1.png";
+import logo2 from "./assets/logo2.png";
+import logo3 from "./assets/logo3.png";
 import Footer from "./components/Footer";
+import { useRef } from "react";
+import Form from "./components/Form";
 
 export default function Home() {
+  const contactRef = useRef<HTMLDivElement>(null);
+
+  const scrollToContact = () => {
+    if (contactRef.current) {
+      contactRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div className={styles.par}>
-      <Navbar />
+      <Navbar scrollToContact={scrollToContact} />
       <div className={styles.page}>
         <section>
           <div className={styles.sec1_container}>
             <div className={styles.sec1_container_t}>
               <h2>The medical scribe that actually works</h2>
-              <button>Request a Demo &gt; </button>
+              <button onClick={scrollToContact}>Request a Demo &gt; </button>
               <img src="./logo.png" alt="logo" />
             </div>
             <div className={styles.sec1_logo_slider}>
@@ -203,18 +215,28 @@ export default function Home() {
                 </div>
               </div>
               <div className={styles.sec3_features_tab_content_wrapper}>
-                <div className={styles.sec3_features_tab_content_wrapper_single}>
-                  <img src="./features_tab_content_img.png" alt="Health AI" className={styles.features_tab_image}/>
+                <div
+                  className={styles.sec3_features_tab_content_wrapper_single}
+                >
+                  <img
+                    src="./features_tab_content_img.png"
+                    alt="Health AI"
+                    className={styles.features_tab_image}
+                  />
                 </div>
               </div>
             </div>
           </div>
         </div>
         <div className={styles.sec3_button}>
-          <button>Schedule a demo</button>
+          <button onClick={scrollToContact}>Schedule a demo</button>
         </div>
       </section>
-      <Footer/>
+      <section ref={contactRef} className={styles.contactSection}>
+        <h2>Contact Us</h2>
+        <Form/>
+      </section>
+      <Footer />
     </div>
   );
 }

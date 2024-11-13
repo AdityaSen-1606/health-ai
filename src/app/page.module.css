@@ -342,3 +342,25 @@
   background-color: #1F1F1F;
   cursor: pointer;
 }
+
+.contactSection{
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 120px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contactSection h2{
+    font-family: 'Clash Grotesk', sans-serif;
+    letter-spacing: -1px;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 120%;
+    color: #161525;
+}
+
