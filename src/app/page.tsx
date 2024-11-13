@@ -28,43 +28,12 @@ export default function Home() {
         <section>
           <div className={styles.sec1_container}>
             <div className={styles.sec1_container_t}>
-              <h2>The medical scribe that actually works</h2>
+              <h2>
+                Intelligence That Cares - <br />
+                Early Intervention, Better Outcomes
+              </h2>
               <button onClick={scrollToContact}>Request a Demo &gt; </button>
               <img src="./logo.png" alt="logo" />
-            </div>
-            <div className={styles.sec1_logo_slider}>
-              <div className={styles.sec1_logo_slider_title}>
-                <p>Trusted By :</p>
-              </div>
-              <div className={styles.sec1_logo_slider_wrapper}>
-                <Image
-                  src={left}
-                  alt="Clinicians"
-                  className={styles.sec1_logo_slider_shadow_left}
-                />
-                <div className={styles.sec1_single_slider_container}>
-                  <Image
-                    src={logo1}
-                    alt="logo1"
-                    className={styles.sec1_single_slider_container_img_1}
-                  />
-                  <Image
-                    src={logo2}
-                    alt="logo2"
-                    className={styles.sec1_single_slider_container_img}
-                  />
-                  <Image
-                    src={logo3}
-                    alt="logo3"
-                    className={styles.sec1_single_slider_container_img}
-                  />
-                </div>
-                <Image
-                  src={right}
-                  alt="Clinicians"
-                  className={styles.sec1_logo_slider_shadow_right}
-                />
-              </div>
             </div>
             <div className={styles.sec1_video}>
               <video
@@ -88,25 +57,6 @@ export default function Home() {
           </div>
         </section>
       </div>
-      <section>
-        <div className={styles.data}>
-          <div className={styles.counter_content}>
-            <div className={styles.left_content}>
-              <h2>More time to care for patients and providers</h2>
-            </div>
-            <div className={styles.counter_content_wrapper}>
-              <div className={styles.single_number}>
-                <h1>92%</h1>
-                <p>Less time spent on notes and charts</p>
-              </div>
-              <div className={styles.single_number}>
-                <h1>6+ hours</h1>
-                <p>Saved per provider per week</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
       <section className={styles.sec3}>
         <div className={styles.sec3_container}>
           <div className={styles.sec3_header_wrapper}>
@@ -128,10 +78,13 @@ export default function Home() {
                     />
                   </div>
                   <div className={styles.tab_button_content}>
-                    <h2>Generate SOAP Notes for 40+ Specialties</h2>
+                    <h2>
+                      Facilitate early detection and escalation of cases to
+                      providers.
+                    </h2>
                     <p>
-                      Turn Patient encounters into SOAP, H&P, and customized
-                      notes for clinicians.
+                      Deploy a clinical assistant on patient’s smartphone to
+                      have a constant oversight on their health.
                     </p>
                   </div>
                   <div className={styles.tab_button_icon_right}>
@@ -151,9 +104,14 @@ export default function Home() {
                     />
                   </div>
                   <div className={styles.tab_button_content}>
-                    <h2>Suggest Medical Coding for Faster Reimbursements</h2>
+                    <h2>
+                      Create weekly health summaries for chronic disease
+                      patients.
+                    </h2>
                     <p>
-                      Suggest ICD-10 and CPT codes for faster reimbursements.
+                      These weekly summaries help the system learn about
+                      patient’s health and hyperpersonalize the responses for
+                      them.
                     </p>
                   </div>
                   <div className={styles.tab_button_icon_right}>
@@ -174,11 +132,12 @@ export default function Home() {
                   </div>
                   <div className={styles.tab_button_content}>
                     <h2>
-                      Provide Post-Visit Summaries for Better Patient Engagement
+                      Reduce readmissions, complications and ER visits like
+                      never before.
                     </h2>
                     <p>
-                      Generate patient-friendly summaries and letters of medical
-                      necessity.
+                      Early detection by the clinical assistant leads to early
+                      course- correction of the treatment plan.
                     </p>
                   </div>
                   <div className={styles.tab_button_icon_right}>
@@ -234,7 +193,7 @@ export default function Home() {
       </section>
       <section ref={contactRef} className={styles.contactSection}>
         <h2>Contact Us</h2>
-        <Form/>
+        <Form />
       </section>
       <Footer />
     </div>

@@ -11,7 +11,6 @@ export const Navbar: React.FC<NavbarProps> = ({ scrollToContact }) => {
       <div>
         <ul className={style.link}>
           <li>Products</li>
-          <li>Privacy</li>
           <li onClick={scrollToContact}>Contact Us</li>
         </ul>
       </div>

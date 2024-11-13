@@ -8,10 +8,8 @@ const Footer = () => {
           <div className={styles.logoPlaceholder}>
             <img src="./logo.png" alt="logo" />
           </div>
-          <p>
-            Revolutionizing healthcare with AI-powered solutions to reduce
-            clinical burden on doctors.
-          </p>
+          <p>manav@makaicare.com</p>
+          <p>415, Mission Street, San Francisco - 94105</p>
         </div>
         <div className={styles.links}>
           <div>

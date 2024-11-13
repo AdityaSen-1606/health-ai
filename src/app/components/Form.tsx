@@ -8,6 +8,9 @@ interface FormData {
   name: string;
   email: string;
   message: string;
+  phone: string;
+  organisation: string;
+  location: string;
 }
 
 interface FormErrors {
@@ -19,6 +22,9 @@ function Form() {
     name: "",
     email: "",
     message: "",
+    phone:"",
+    organisation:"",
+    location:""
   });
 
   const [errors, setErrors] = useState<FormErrors>({
@@ -68,7 +74,10 @@ function Form() {
         setFormData({
           name:"",
           email:"",
-          message:""
+          message:"",
+          phone:"",
+          organisation:"",
+          location:""
         });
 
         console.log("Saved");
@@ -108,6 +117,29 @@ function Form() {
           required
         />
         {errors.email && <p>{errors.email}</p>}
+        <input
+          type="text"
+          name="phone"
+          placeholder="Phone Number"
+          value={formData.phone}
+          onChange={handleChange}
+          required
+        />
+        <input
+          type="text"
+          name="organisation"
+          placeholder="Organization Name"
+          value={formData.organisation}
+          onChange={handleChange}
+        />
+        <input
+          type="text"
+          name="location"
+          placeholder="Location"
+          value={formData.location}
+          onChange={handleChange}
+          required
+        />
         <textarea
           placeholder="Message"
           name="message"

@@ -16,7 +16,7 @@
 
 .sec1_container_t{
   margin-top: 60px;
-  max-width: 850px;
+  max-width: 60%;
   text-align: center;
   justify-content: center;
   align-items: center;
@@ -31,7 +31,7 @@
 
 .sec1_container_t h2{
   font-family: 'Clash Grotesk', sans-serif;
-  font-size: 72px;
+  font-size: 60px;
   font-weight: 800;
 }
 
@@ -53,128 +53,6 @@
   width: 150px;
 }
 
-.sec1_logo_slider{
-  display: flex;
-  padding: 25px;
-  justify-content: center;
-  margin: 30px;
-  gap: clamp(50px, 5vw, 200px);
-}
-
-.sec1_logo_slider_title{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.sec1_logo_slider_title p{
-  font-family: 'Clash Grotesk', sans-serif;
-  font-size: 24px;
-  font-weight: 500;
-  color: #5f5f69;
-}
-
-.sec1_logo_slider_wrapper {
-  display: flex;
-  position: relative;
-  overflow: hidden;
-  align-items: center;
-  justify-content: space-between;
-  width: 65%;
-}
-
-.sec1_logo_slider_shadow_left,
-.sec1_logo_slider_shadow_right {
-  height: 100%;
-  z-index: 1;
-}
-
-.sec1_single_slider_container{
-  display: flex;
-  animation: slideLeft 10s infinite Linear;
-}
-
-@keyframes slideLeft {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
-
-.sec1_single_slider_container_img {
-  max-width: 27%;
-  height: 50%;
-  display: inline-block;
-  vertical-align: center;
-}
-
-.sec1_single_slider_container_img_1 {
-  max-width: 45%;
-  height: 40%;
-  display: inline-block;
-  vertical-align: center;
-}
-
-/* comment: starting data styling */
-
-.data{
-  border-bottom: 1px solid #1615251a;
-  background-color: #FFFFFF;
-  padding-top: 100px;
-  padding-bottom: 95px;
-  justify-content: center;
-  display: flex;
-}
-
-.counter_content{
-  display: flex;
-  justify-content: space-between;
-  width: 80%;
-}
-
-.left_content{
-  width: 40%
-}
-
-.left_content h2{
-  font-size: 36px;
-  line-height: 130%;
-  color: #161525;
-  letter-spacing: -1px;
-  margin-top: 0;
-  margin-bottom: 0;
-  font-weight: 600;
-  font-family: 'Clash Grotesk', sans-serif;
-}
-
-.counter_content_wrapper {
-  display: flex;
-  gap: 98px;
-  flex-wrap: wrap;
-}
-
-.single_number{
-  text-align: center;
-}
-
-.single_number h1{
-  color: #5a45fe;
-  letter-spacing: -1.92px;
-  margin-top: 0;
-  margin-bottom: 0;
-  font-size: 64px;
-  font-weight: 600;
-  line-height: 115%;
-  font-family: 'Clash Grotesk', sans-serif;
-}
-
-.single_number p{
-  font-size: 18px;
-  color: #5f5f69;
-  font-family: 'Clash Grotesk', sans-serif;
-}
 
 /* starting sec3 */
 .sec3{
@@ -346,7 +224,7 @@
 .contactSection{
   padding-left: 30px;
   padding-right: 30px;
-  padding-bottom: 120px;
+  padding-bottom: 50px;
   display: flex;
   flex-flow: column;
   align-items: center;
