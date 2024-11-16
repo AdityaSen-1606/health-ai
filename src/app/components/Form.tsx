@@ -100,53 +100,74 @@ function Form() {
   return (
     <div className={styles.contactSection}>
       <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          placeholder="Name"
-          name="name"
-          value={formData.name}
-          onChange={handleChange}
-          required
-        />
-        <input
-          type="email"
-          placeholder="Email"
-          name="email"
-          value={formData.email}
-          onChange={handleChange}
-          required
-        />
+        <div className={styles.contactSection_form_group}>
+          <label htmlFor="name">Name :</label>
+          <input
+            type="text"
+            placeholder="Name"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div className={styles.contactSection_form_group}>
+          <label htmlFor="email">Email :</label>
+          <input
+            type="email"
+            placeholder="Email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+          />
+        </div>
+
         {errors.email && <p>{errors.email}</p>}
-        <input
-          type="text"
-          name="phone"
-          placeholder="Phone Number"
-          value={formData.phone}
-          onChange={handleChange}
-          required
-        />
-        <input
-          type="text"
-          name="organisation"
-          placeholder="Organization Name"
-          value={formData.organisation}
-          onChange={handleChange}
-        />
-        <input
-          type="text"
-          name="location"
-          placeholder="Location"
-          value={formData.location}
-          onChange={handleChange}
-          required
-        />
-        <textarea
-          placeholder="Message"
-          name="message"
-          value={formData.message}
-          onChange={handleChange}
-          required
-        ></textarea>
+
+        <div className={styles.contactSection_form_group}>
+          <label htmlFor="phone">Phone :</label>
+          <input
+            type="text"
+            name="phone"
+            placeholder="Phone Number"
+            value={formData.phone}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div className={styles.contactSection_form_group}>
+          <label htmlFor="organisation">Organization :</label>
+          <input
+            type="text"
+            name="organisation"
+            placeholder="Organization Name"
+            value={formData.organisation}
+            onChange={handleChange}
+          />
+        </div>
+
+        <div className={styles.contactSection_form_group}>
+          <label htmlFor="location">Location :</label>
+          <input
+            type="text"
+            name="location"
+            placeholder="Location"
+            value={formData.location}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div className={styles.contactSection_form_group}>
+          <label htmlFor="message">Message :</label>
+          <textarea
+            placeholder="Message"
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
+            required
+          ></textarea>
+        </div>
         <button type="submit">Send</button>
       </form>
       <ToastContainer

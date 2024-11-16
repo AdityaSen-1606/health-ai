@@ -27,7 +27,7 @@ export default function Home() {
                 Early Intervention, Better Outcomes
               </h2>
               <button onClick={scrollToContact}>Request a Demo &gt; </button>
-              <img src="./logo.png" alt="logo" />
+              <img src="./logo1.png" alt="logo" />
             </div>
             <div className={styles.sec1_video}>
               <video
@@ -45,7 +45,7 @@ export default function Home() {
                   objectFit: "cover",
                 }}
               >
-                <source type="video/mp4" src="./videos/video.mp4" />
+                <source type="video/mp4" src="./videos/MakaiCareVideo.mp4" />
               </video>
             </div>
           </div>

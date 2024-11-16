@@ -6,7 +6,7 @@ const Footer = () => {
       <div className={styles.footerTop}>
         <div className={styles.companyInfo}>
           <div className={styles.logoPlaceholder}>
-            <img src="./logo.png" alt="logo" />
+            <img src="./logo1.png" alt="logo" />
           </div>
           <p>manav@makaicare.com</p>
           <p>415, Mission Street, San Francisco - 94105</p>
@@ -15,16 +15,14 @@ const Footer = () => {
           <div>
             <h4>SOLUTIONS</h4>
             <ul>
-              <li>Help Center</li>
-              <li>Trust Center</li>
-              <li>Privacy Policy</li>
+              <li>Features</li>
               <li>Contact Us</li>
             </ul>
           </div>
         </div>
       </div>
       <div className={styles.footerBottom}>
-        <p>© 2024 HealthTech AI, Inc. All rights reserved.</p>
+        <p>© 2024 Makai Care, Inc. All rights reserved.</p>
       </div>
     </footer>
   );

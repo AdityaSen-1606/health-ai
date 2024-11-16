@@ -242,3 +242,151 @@
     color: #161525;
 }
 
+/* Tablet Screens: Between 768px and 950px */
+@media screen and (max-width: 950px) {
+  .sec1_container_t {
+    max-width: 70%;
+  }
+
+  .sec1_container_t h2 {
+    font-size: 40px;
+  }
+
+  .sec1_container_t button {
+    font-size: 16px;
+    padding: 8px 8px;
+  }
+
+  .sec3 {
+    padding: 100px 20px;
+  }
+
+  .sec3_features {
+    gap: 120px;
+  }
+
+  .sec3_features_tab_button_wrapper {
+    width: 40%;
+  }
+
+  .sec3_features_tab_content_wrapper {
+    width: 60%;
+  }
+
+  .sec3_header_wrapper h1 {
+    font-size: 40px;
+  }
+
+  .sec3_header_wrapper p {
+    font-size: 16px;
+  }
+
+  .features_tab_image {
+    width: 200px;
+    height: 400px;
+  }
+}
+
+/* Mobile Screens: Between 548px and 768px */
+@media screen and (max-width: 768px) {
+  .sec1_container_t {
+    max-width: 90%;
+  }
+
+  .sec1_container_t h2 {
+    font-size: 32px;
+  }
+
+  .sec1_container_t img {
+    width: 100px;
+  }
+
+  .sec3 {
+    padding: 80px 15px;
+  }
+
+  .sec3_features {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .sec3_features_tab_button_wrapper {
+    width: 100%;
+  }
+
+    .sec3_features_tab_content_wrapper{
+      display: none;
+    }
+
+  .sec3_features_tab_single {
+    gap: 15px;
+    padding: 16px;
+  }
+
+  .tab_button_content h2 {
+    font-size: 16px;
+  }
+
+  .tab_button_content p {
+    font-size: 14px;
+  }
+
+  .features_tab_image {
+    width: 180px;
+    height: 360px;
+  }
+
+  .sec3_header_wrapper h1 {
+    font-size: 32px;
+  }
+
+  .sec3_header_wrapper p {
+    font-size: 14px;
+  }
+
+  .contactSection h2 {
+    font-size: 32px;
+  }
+}
+
+/* Small Mobile Screens: Below 548px */
+@media screen and (max-width: 548px) {
+  .sec1_container_t {
+    max-width: 100%;
+  }
+
+  .sec1_container_t h2 {
+    font-size: 28px;
+  }
+
+  .sec1_container_t img {
+    width: 100px;
+  }
+
+  .sec3_features_tab_single {
+    padding: 12px;
+    gap: 10px;
+  }
+
+  .sec3_header_wrapper h1 {
+    font-size: 24px;
+  }
+
+  .sec3_header_wrapper p {
+    font-size: 12px;
+  }
+
+  .features_tab_image {
+    width: 150px;
+    height: 300px;
+  }
+
+  .sec3_button button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .contactSection h2 {
+    font-size: 28px;
+  }
+}

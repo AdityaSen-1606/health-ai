@@ -13,10 +13,22 @@
     margin-right: auto;
 }
 
+.contactSection_form_group{
+    display: flex;
+    align-items: center;
+}
+
+.contactSection_form_group label {
+    min-width: 120px;
+    text-align: left;
+}
+
+
 .contactSection form input[type="text"],
 .contactSection form input[type="email"],
 .contactSection form textarea {
-    width: 100%;
+    align-items: right;
+    width: 80%;
     padding: 12px 16px;
     margin: 8px 0;
     font-size: 16px;
@@ -64,4 +76,103 @@
     color: #FFFFFF;
     background-color: #1F1F1F;
     cursor: pointer;
+}
+
+/* Tablet Screens: Between 768px and 950px */
+@media screen and (max-width: 950px) {
+    .contactSection {
+        width: 90%;
+    }
+
+    .contactSection form {
+        width: 90%;
+        max-width: 700px;
+    }
+
+    .contactSection_form_group label {
+        min-width: 100px;
+        font-size: 14px;
+    }
+
+    .contactSection form input[type="text"],
+    .contactSection form input[type="email"],
+    .contactSection form textarea {
+        width: 90%;
+        font-size: 14px;
+    }
+
+    .contactSection form button {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+}
+
+/* Mobile Screens: Between 548px and 768px */
+@media screen and (max-width: 768px) {
+    .contactSection {
+        width: 90%;
+    }
+
+    .contactSection form {
+        width: 100%;
+        padding: 20px;
+        max-width: none;
+    }
+
+    .contactSection_form_group {
+        flex-direction: column;
+    }
+
+    .contactSection_form_group label {
+        min-width: 100%;
+        margin-bottom: 8px;
+        font-size: 14px;
+    }
+
+    .contactSection form input[type="text"],
+    .contactSection form input[type="email"],
+    .contactSection form textarea {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .contactSection form button {
+        font-size: 16px;
+        padding: 12px 20px;
+    }
+}
+
+/* Small Mobile Screens: Below 548px */
+@media screen and (max-width: 548px) {
+    .contactSection {
+        width: 90%;
+    }
+
+    .contactSection form {
+        width: 100%;
+        padding: 15px;
+        max-width: none;
+    }
+
+    .contactSection_form_group {
+        flex-direction: column;
+    }
+
+    .contactSection_form_group label {
+        min-width: 100%;
+        margin-bottom: 8px;
+        font-size: 12px;
+    }
+
+    .contactSection form input[type="text"],
+    .contactSection form input[type="email"],
+    .contactSection form textarea {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .contactSection form button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
 }
